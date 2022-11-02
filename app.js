@@ -22,5 +22,13 @@ gateway.on("message", (m) => {
       "https://discord.com/api/webhooks/1037375634562891806/u0OgYZ4W_EEuBFbc91v1NB85E-on4LzGDUyhLsePFeqhdH6tf1-S6qWEq3u7xo_UZCJZ",
       content
     );
+  // Copy messages from Fractal server to Rabbit server
+  if (m.channel_id === "994291138179637299") {
+    let content = m.content ? m.content : { embeds: [m.embeds[0]] };
+
+    client.sendWebhook(
+      "https://discord.com/api/webhooks/1037501311157014548/wO8n8D9YeIntHALslU0tSViN0ddNLZO_ZrtSfUphFfqSwbEydUj8AJY7Y4djF_ElRHfU",
+      content
+    );
   }
 });
