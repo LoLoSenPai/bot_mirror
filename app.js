@@ -23,8 +23,8 @@ gateway.on("message", (m) => {
       content
     );
   }
-  // Copy messages from Solpha server to Rabbit server
-  if (m.channel_id === "994291138179637299") {
+  // Copy messages from Gorilla server to Rabbit server
+  if (m.channel_id === "993633368371638292") {
     let content = m.content ? m.content : { embeds: [m.embeds[0]] };
 
     client.sendWebhook(
